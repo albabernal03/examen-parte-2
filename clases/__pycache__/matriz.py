@@ -18,8 +18,11 @@ class Comprobacion:
         if n >=0 and n<=3:
             if matriz[n][3] == matriz[n][0] + matriz[n][1] + matriz[n][2]:
                 print('El resultado es correcto, el cuarto numero es la suma de los tres anteriores')
-            else:
-                print('No es corrector')
+            elif  matriz[n][3] != matriz[n][0] + matriz[n][1] + matriz[n][2]:
+                print('El resultado de esa fila no es correcto, la solucion es la siguiente:')
+                matriz[n][3]=matriz[n][0] + matriz[n][1] + matriz[n][2]
+                print(matriz)
+
         else:
             print('La fila seleccionada no existe')
     comprobacion('self')
